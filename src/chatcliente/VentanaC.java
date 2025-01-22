@@ -25,9 +25,9 @@ public class VentanaC extends JFrame {
      * Constructor de la ventana.
      */
     public VentanaC() {
-        initComponents();
+        initComponentes();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        String ip_puerto_nombre[] = getIP_Puerto_Nombre();
+        String ip_puerto_nombre[] = getIPPuertoNombre();
         String ip = ip_puerto_nombre[0];
         String puerto = ip_puerto_nombre[1];
         String nombre = ip_puerto_nombre[2];
@@ -37,7 +37,7 @@ public class VentanaC extends JFrame {
     /**
      * Método para inciar componentes y formulario.
      */
-    private void initComponents() {
+    private void initComponentes() {
 
         jScrollPane1 = new JScrollPane();
         txtHistorial = new JTextArea();
@@ -203,7 +203,7 @@ public class VentanaC extends JFrame {
      * que quiere participar en el chat.
      * @return array con el puerto, la ip y el nombre
      */
-    private String[] getIP_Puerto_Nombre() {
+    private String[] getIPPuertoNombre() {
         String s[] = new String[3];
         s[0] = DEFAULT_IP;
         s[1] = DEFAULT_PORT;
@@ -238,7 +238,7 @@ public class VentanaC extends JFrame {
      * cuando un usuario cierra sesión.
      * @param identificador
      */
-    void eliminarContacto(String identificador) {
+    public void eliminarContacto(String identificador) {
         for (int i = 0; i < cmbContactos.getItemCount(); i++) {
             if (cmbContactos.getItemAt(i).toString().equals(identificador)) {
                 cmbContactos.removeItemAt(i);

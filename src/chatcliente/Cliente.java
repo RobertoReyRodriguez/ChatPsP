@@ -35,7 +35,7 @@ public class Cliente extends Thread {
      * @param puerto
      * @param nombre
      */
-    Cliente(VentanaC ventana, String host, Integer puerto, String nombre) {
+    public Cliente(VentanaC ventana, String host, Integer puerto, String nombre) {
         this.ventana = ventana;
         this.host = host;
         this.puerto = puerto;
@@ -176,7 +176,7 @@ public class Cliente extends Thread {
      * Tramita una notificación de desconexión para eliminar al cliente 
      * de las listas de contactos y de la lista de clientes
      */
-    void confirmarDesconexion() {
+    public void confirmarDesconexion() {
         LinkedList<String> lista = new LinkedList<>();
         lista.add("SOLICITUD_DESCONEXION");
         lista.add(identificador);

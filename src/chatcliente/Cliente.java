@@ -191,7 +191,7 @@ public class Cliente extends Thread {
      * Devuelve el identificador único del cliente
      * @return identificador del cliente
      */
-    String getIdentificador() {
+    public String getIdentificador() {
         return identificador;
     }
 }
